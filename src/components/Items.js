@@ -44,6 +44,15 @@ function Items({ listId, items, addItem, deleteItem, toggleComplete, modifyItem 
             </li>
           ))}
         </ul>
+        <div>
+          <input
+            type="text"
+            value={itemName}
+            onChange={(e) => setItemName(e.target.value)}
+            placeholder="New Item"
+          />
+          <button onClick={handleAddItem}>Add Item</button>
+        </div>
       </div>
     );
   }
