@@ -9,6 +9,8 @@
 
 .navbar-title{
     color: #537299;
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
 }
 
 .navbar-links {
@@ -20,7 +22,8 @@
 .navbar-links a {
     text-decoration: none;
     color: #537299;
-    font-size: 16px;
+    font-size: 21px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .navbar-links a:hover {
