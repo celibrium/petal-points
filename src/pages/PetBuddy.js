@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 function PetBuddy() {
   return (
     <div>
-      <h1>Welcome to Your Pet Buddy</h1>
       <motion.div
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 0.5 }}
@@ -22,16 +21,6 @@ function PetBuddy() {
       >
         🐾
       </motion.div>
-
-      {/* Navigation buttons */}
-      <div style={{ marginTop: '20px' }}>
-        <Link to="/tasks">
-          <button style={{ margin: '5px' }}>Go to Tasks</button>
-        </Link>
-        <Link to="/store">
-          <button style={{ margin: '5px' }}>Go to Store</button>
-        </Link>
-      </div>
     </div>
   );
 }
