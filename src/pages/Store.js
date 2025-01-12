@@ -13,7 +13,6 @@ const ItemBox = ({ name, image, price }) => {
   
     return (
       <div className="item-box">
-        <BalanceWidget />
         <h3 className="item-name">{name}</h3>
         <img src={image} alt={name} className="item-image" />
         <div className="price-tag">${price}</div>

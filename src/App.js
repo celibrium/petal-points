@@ -6,6 +6,7 @@ import PetBuddy from './pages/PetBuddy';
 import TaskList from './pages/TaskList';
 import Store from './pages/Store';
 import './App.css';
+import BalanceWidget from './components/BalanceWidget';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="App">
         <NavBar />
         <TestApiCall />
+        <BalanceWidget />
         <Routes>
           <Route path="/" element={<PetBuddy />} /> 
           <Route path="/tasks" element={<TaskList />} />

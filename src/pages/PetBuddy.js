@@ -40,7 +40,6 @@ function PetBuddy() {
         alt="a white cat"/>
       </motion.div>
       </div>
-      <BalanceWidget/>
     </div>
   );
 }
