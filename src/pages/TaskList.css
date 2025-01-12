@@ -1,0 +1,25 @@
+/* Container to hold all lists */
+.list-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap to the next row if they exceed container width */
+    gap: 16px; /* Space between each list box */
+    justify-content: center; /* Center the items horizontally */
+    padding: 16px; /* Add some padding around the container */
+}
+
+/* Individual list boxes */
+.list-box {
+    display: flex;
+    flex-direction: column; /* Stack items inside the box vertically */
+    justify-content: space-between;
+    align-items: center; /* Center content horizontally */
+    border: 1px solid #ccc; /* Border for each list box */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 16px; /* Space inside the box */
+    width: 300px; /* Set a fixed width for each box */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.list-box h2 {
+    color: #537299;
+}
