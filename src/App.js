@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import TestApiCall from './components/AIpet';
 import PetBuddy from './pages/PetBuddy';
 import TaskList from './pages/TaskList';
 import Store from './pages/Store';
@@ -11,6 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
+        <TestApiCall />
         <Routes>
           <Route path="/" element={<PetBuddy />} /> 
           <Route path="/tasks" element={<TaskList />} />
