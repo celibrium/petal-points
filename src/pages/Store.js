@@ -1,14 +1,26 @@
 import BalanceWidget from '../components/BalanceWidget';
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import './Store.css'; 
 import ribbon from '../images/ribbon.png'
+import GlobalContext from '../GlobalContext';
 
 // Box Component
 const ItemBox = ({ name, image, price }) => {
-    const [isPurchased, setIsPurchased] = useState(false);
+    const [isPurchased, setIsPurchased] = useState(() => {
+        const savedState = localStorage.getItem(`item-purchased-${name}`);
+        return savedState ? JSON.parse(savedState) : false;});
+    const { balance, setBalance } = useContext(GlobalContext);
   
     const handlePurchase = () => {
-      setIsPurchased(true); // Update state to indicate purchase
+      if (balance >= price) {
+        setBalance(balance-price);
+        setIsPurchased(true); // Update state to indicate purchase
+
+        // Save the purchase state to localStorage
+        localStorage.setItem(`item-purchased-${name}`, true);
+      } else {
+        alert("Not enough Petal Points. Please work harder for your pet!");
+      }
     };
   
     return (
