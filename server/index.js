@@ -13,7 +13,6 @@ app.use(cors());
 // OpenAI API
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const client = new OpenAI();
-console.log(process.env.OPENAI_API_KEY); // Ensure it prints the API key
 
 
 app.post('/api/openai', (req, res) => {
