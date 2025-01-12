@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Items from "../components/Items";
 import './TaskList.css';
+import BalanceWidget from '../components/BalanceWidget';
+import GlobalContext from '../GlobalContext';
 
 function TaskList() {
 
@@ -46,6 +48,7 @@ function TaskList() {
     };
     
     const toggleComplete = (listId, itemId) => {
+        lists[listId].items[itemId].completed ? setBalance(balance-5) : setBalance(balance+5);
         setLists((prev) =>
             prev.map((list) =>
                 list.id === listId
@@ -109,6 +112,7 @@ function TaskList() {
                 </div>
             ))}
         </div>
+        <BalanceWidget/>
     </div>
   );
 }
