@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+input[type="text"] {
+  border: 1.5px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Removes default focus outline */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+input[type="text"]:focus {
+  border-color: #d0dde9; /* Changes border color on focus */
+}
+
+button {
+  border: 0;
+  border-color: #537299;
+  border-radius: 4px;
+  color: #537299;
+  margin: 2px;
+}
+
+button:hover {
+  background-color: #d0dde9;
+}
+
+.pixelify-sans {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
