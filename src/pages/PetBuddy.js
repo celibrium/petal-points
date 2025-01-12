@@ -21,19 +21,24 @@ function PetBuddy() {
        <h1 className="greetings">{randomGreeting}</h1>
        <div className="center-content">
       <motion.div
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 0.5 }}
-        style={{
-          width: '180px',
-          height: '180px',
-          backgroundColor: 'lightblue',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '24px',
-        }}
-      >
+      animate={{ y: [0, -30, 0] }} // Moves up (-30px) and back down to 0
+      transition={{
+        duration: 0.5,
+        ease: [0.25, 0.1, 0.25, 1], 
+      }}
+      style={{
+        width: '180px',
+        height: '180px',
+        backgroundColor: 'lightblue',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '24px',
+        position: 'relative',
+      }}
+    >
+
         <img
         className='cat'
         src={whiteCat}
