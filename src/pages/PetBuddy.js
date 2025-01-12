@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import whiteCat from '../images/whiteCat.png';
-import '../PetBuddy.css'
 import BalanceWidget from '../components/BalanceWidget';
 import './PetBuddy.css'
 
