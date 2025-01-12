@@ -46,7 +46,7 @@ const AIpet = () => {
           onClick={() => setIsChatVisible(true)}
           className="chat-button"
         >
-          Open Chat
+          Chat with me!
         </button>
       ) : (
         <div className="chatbox">
