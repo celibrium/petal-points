@@ -1,0 +1,120 @@
+/* General Styles */
+.chat-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chat-button {
+    position: fixed; 
+    bottom: 20px;  
+    left: 20px;      
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #364c7d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; 
+  }
+  
+  .chat-button:hover {
+    background-color: #16304b;
+  }
+  
+  /* Chatbox Styles */
+  .chatbox {
+    position: relative;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .chatbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+  }
+  
+  .chatbox-close:hover {
+    background-color: #cc0000;
+  }
+  
+  .chatbox-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .chat-message {
+    margin: 10px 0;
+  }
+  
+  .chat-message.user {
+    text-align: right;
+  }
+  
+  .chat-message.assistant {
+    text-align: left;
+  }
+  
+  .chat-bubble {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  
+  .chat-bubble.user {
+    background-color: #364c7d;
+    color: white;
+  }
+  
+  .chat-bubble.assistant {
+    background-color: #d689bf;
+    color: black;
+  }
+  
+  .chatbox-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .chatbox-send {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #364c7d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .chatbox-send:hover {
+    background-color: #16304b;
+  }
+  
+  .chat-error {
+    color: red;
+    margin-top: 10px;
+  }
+  
