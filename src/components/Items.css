@@ -1,0 +1,53 @@
+.items {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+/* Styling for the list of items */
+.items-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Allows the list to grow and fill the available space */
+    overflow-y: auto; /* Adds scroll if items exceed container height */
+}
+
+/* Individual item styling */
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    padding: 1px;
+}
+
+.item:hover {
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f8f9fa; /* Highlight item on hover */
+}
+
+/* Hide actions by default */
+.item-actions {
+    display: none;
+}
+
+/* Show actions on hover */
+.item:hover .item-actions {
+    display: flex; /* Show actions when hovering over an item */
+    gap: 8px; /* Add spacing between buttons */
+}
+
+.item:hover button {
+    margin: 0;
+}
+
+/* Add spacing and styling for item name */
+.item-name {
+    flex-grow: 1; /* Ensures the name takes up available space */
+    margin-left: 8px; /* Space between checkbox and name */
+    margin-right: 8px;
+    text-align: left;
+}
