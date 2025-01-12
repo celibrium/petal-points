@@ -121,7 +121,6 @@ function TaskList() {
                 </div>
             ))}
         </div>
-        <BalanceWidget/>
     </div>
   );
 }

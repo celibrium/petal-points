@@ -6,6 +6,7 @@ import PetBuddy from './pages/PetBuddy';
 import TaskList from './pages/TaskList';
 import Store from './pages/Store';
 import './App.css';
+import BalanceWidget from './components/BalanceWidget';
 
 function App() {
   const [isChatVisible, setIsChatVisible] = useState(false);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/store" element={<Store />} />
           </Routes>
         </div>
+        <BalanceWidget />
       </div>
     </Router>
   );
