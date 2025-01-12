@@ -1,3 +1,8 @@
+h1 {
+    color: #537299;
+    font-family: 'Merriweather', serif;
+}
+
 /* Container to hold all lists */
 .list-container {
     display: flex;
