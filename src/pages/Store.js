@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import BalanceWidget from '../components/BalanceWidget';
 
 function Store(){
     return (
-        <h1> store </h1>
+        <div>
+            <h1> store </h1>
+            <BalanceWidget/>
+        </div>
     )
 }
 

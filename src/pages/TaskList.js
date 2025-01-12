@@ -1,12 +1,23 @@
-import React, {useState} from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Items from "../components/Items";
 import './TaskList.css';
+import BalanceWidget from '../components/BalanceWidget';
+import GlobalContext from '../GlobalContext';
 
 function TaskList() {
 
-    const [lists, setLists] = useState([]);
+    const [lists, setLists] = useState(() => {
+        // Load the initial state from localStorage
+        const savedLists = localStorage.getItem('taskLists');
+        return savedLists ? JSON.parse(savedLists) : [];
+    });
     const [listName, setListName] = useState("");
+    const { balance, setBalance } = useContext(GlobalContext);
 
+    // Save lists to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem('taskLists', JSON.stringify(lists));
+    }, [lists]);
 
     const addList = () => {
         if (listName.trim()) {
@@ -46,6 +57,7 @@ function TaskList() {
     };
     
     const toggleComplete = (listId, itemId) => {
+        lists[listId].items[itemId].completed ? setBalance(balance-5) : setBalance(balance+5);
         setLists((prev) =>
             prev.map((list) =>
                 list.id === listId
@@ -109,6 +121,7 @@ function TaskList() {
                 </div>
             ))}
         </div>
+        <BalanceWidget/>
     </div>
   );
 }
