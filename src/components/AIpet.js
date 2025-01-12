@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./AIpet.css"; 
 
-const AIpet = () => {
-  const [isChatVisible, setIsChatVisible] = useState(false); // Track chatbox visibility
+const AIpet = ({isChatVisible, setIsChatVisible}) => {
   const [messages, setMessages] = useState([]); // Store chat messages
   const [input, setInput] = useState(""); // Store user input
   const [error, setError] = useState(""); // Store error messages
@@ -46,7 +45,7 @@ const AIpet = () => {
           onClick={() => setIsChatVisible(true)}
           className="chat-button"
         >
-          Chat with me!
+          <strong>Chat with me!</strong>
         </button>
       ) : (
         <div className="chatbox">

@@ -22,7 +22,7 @@ function Items({ listId, items, addItem, deleteItem, toggleComplete, modifyItem 
                         onChange={() => toggleComplete(listId, item.id)}
                     />
                     <span className="item-name">
-                        {item.name} {item.completed && `(Completed on: ${item.date})`}
+                        {item.name}
                     </span>
                     <div className="item-actions">
                         <button

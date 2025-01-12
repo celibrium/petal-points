@@ -1,25 +1,25 @@
 /* General Styles */
 .chat-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center; 
+  margin-left: 100px;
   }
   
   .chat-button {
     position: fixed; 
     bottom: 20px;  
     left: 20px;      
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #364c7d;
-    color: white;
+    padding: 10px;
+    background-color: #537299;
+    color: #F5F5F5;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 8px;
     z-index: 1000; 
+    font-size: 16px;
   }
   
   .chat-button:hover {
-    background-color: #16304b;
+    background-color: #385e86;
   }
   
   /* Chatbox Styles */
@@ -36,20 +36,18 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: red;
-    color: white;
+    color: #385e86;
     border: none;
     border-radius: 50%;
-    cursor: pointer;
     width: 25px;
     height: 25px;
     text-align: center;
     line-height: 25px;
-    font-size: 16px;
+    font-size: 20px;
   }
   
   .chatbox-close:hover {
-    background-color: #cc0000;
+    background-color: #9bb5d1;
   }
   
   .chatbox-messages {
@@ -77,32 +75,36 @@
     display: inline-block;
     padding: 10px 15px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .chat-bubble.user {
-    background-color: #364c7d;
-    color: white;
+    background-color: #385e86;
+    color: #f8f9fa;
   }
   
   .chat-bubble.assistant {
-    background-color: #d689bf;
-    color: black;
+    background-color: #f8f9fa;
+    color: #364c7d;
   }
   
   .chatbox-input {
-    width: 100%;
+    width: 400px;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
     margin-bottom: 10px;
+
+    border: 1.5px solid #d0dde9; /* Border styling */
+    outline: none; /* Removes default focus outline */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
   }
   
   .chatbox-send {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #364c7d;
-    color: white;
+    background-color: #537299;
+    color: #f8f9fa;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -110,11 +112,14 @@
   }
   
   .chatbox-send:hover {
-    background-color: #16304b;
+    background-color: #385e86;
   }
   
   .chat-error {
     color: red;
     margin-top: 10px;
   }
-  
+
+.chatbox-input:focus {
+    border-color: #537299; /* Changes border color on focus */
+  }
